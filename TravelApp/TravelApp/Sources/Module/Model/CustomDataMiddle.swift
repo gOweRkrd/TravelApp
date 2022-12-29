@@ -13,8 +13,8 @@ struct CustomDataMiddle {
 }
 
 let dataMiddleCV: [CustomDataMiddle] = [
-    CustomDataMiddle(title: "Банкок", image: #imageLiteral(resourceName: "thailand-bangkok-city-tailand-5782")),
-    CustomDataMiddle(title: "Патайя", image: #imageLiteral(resourceName: "Таиланд1")),
-    CustomDataMiddle(title: "Панган", image: #imageLiteral(resourceName: "Таиланд2")),
-    CustomDataMiddle(title: "Пхукет", image: #imageLiteral(resourceName: "phuket"))
+    CustomDataMiddle(title: "Bankok", image: #imageLiteral(resourceName: "thailand-bangkok-city-tailand-5782")),
+    CustomDataMiddle(title: "Pattaya", image: #imageLiteral(resourceName: "Таиланд1")),
+    CustomDataMiddle(title: "Phangan", image: #imageLiteral(resourceName: "Таиланд2")),
+    CustomDataMiddle(title: "Phuket", image: #imageLiteral(resourceName: "phuket"))
 ]

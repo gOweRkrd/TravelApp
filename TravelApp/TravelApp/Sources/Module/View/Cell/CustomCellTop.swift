@@ -19,10 +19,9 @@ final class CustomCellTop: UICollectionViewCell {
     private let imageView: UIImageView = {
         
         let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 12
+        imageView.layer.cornerRadius = 70
         return imageView
     }()
     
@@ -43,12 +42,14 @@ final class CustomCellTop: UICollectionViewCell {
 private extension CustomCellTop {
     
     func addSubView() {
+        
         contentView.addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
+            
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
             imageView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             imageView.rightAnchor.constraint(equalTo: contentView.rightAnchor),

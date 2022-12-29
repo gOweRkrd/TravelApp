@@ -19,6 +19,7 @@
 		50D43657295D7464002F9085 /* CustomDataMiddle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D43656295D7464002F9085 /* CustomDataMiddle.swift */; };
 		50D43659295D7788002F9085 /* CustopDataBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D43658295D7788002F9085 /* CustopDataBottom.swift */; };
 		50D4365B295D79A9002F9085 /* TravelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4365A295D79A9002F9085 /* TravelView.swift */; };
+		50D69086295DCF2E000C4C0E /* CustomCellFirstTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D69085295DCF2E000C4C0E /* CustomCellFirstTop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		50D43656295D7464002F9085 /* CustomDataMiddle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataMiddle.swift; sourceTree = "<group>"; };
 		50D43658295D7788002F9085 /* CustopDataBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustopDataBottom.swift; sourceTree = "<group>"; };
 		50D4365A295D79A9002F9085 /* TravelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelView.swift; sourceTree = "<group>"; };
+		50D69085295DCF2E000C4C0E /* CustomCellFirstTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellFirstTop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				50372421295C2D39003F9BDC /* CustomCellTop.swift */,
+				50D69085295DCF2E000C4C0E /* CustomCellFirstTop.swift */,
 				50372423295C2D51003F9BDC /* CustomCellMiddle.swift */,
 				50372425295C3651003F9BDC /* CustomCellBottom.swift */,
 			);
@@ -233,6 +236,7 @@
 				50372426295C3651003F9BDC /* CustomCellBottom.swift in Sources */,
 				50D43657295D7464002F9085 /* CustomDataMiddle.swift in Sources */,
 				50D43659295D7788002F9085 /* CustopDataBottom.swift in Sources */,
+				50D69086295DCF2E000C4C0E /* CustomCellFirstTop.swift in Sources */,
 				50372424295C2D51003F9BDC /* CustomCellMiddle.swift in Sources */,
 				5037240C295C2C2F003F9BDC /* AppDelegate.swift in Sources */,
 				5037240E295C2C2F003F9BDC /* SceneDelegate.swift in Sources */,

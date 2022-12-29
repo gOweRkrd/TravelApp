@@ -9,7 +9,7 @@ import UIKit
 
 struct CustomDataBottom {
     let image: UIImage
-  
+
 }
 
 let dataBottomCV: [CustomDataBottom] = [

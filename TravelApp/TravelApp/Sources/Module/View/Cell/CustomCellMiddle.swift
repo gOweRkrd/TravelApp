@@ -24,16 +24,17 @@ final class CustomCellMiddle: UICollectionViewCell {
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 12
+        
         return imageView
     }()
     
     lazy var labelCountry : UILabel = {
+        
         let labelCountry = UILabel()
-        labelCountry.text = "Тайланд"
         labelCountry.font = UIFont.boldSystemFont(ofSize: 30.0)
         labelCountry.textAlignment = .center
         labelCountry.textColor = UIColor(red: 248/255, green: 247/255, blue: 241/255, alpha: 1)
-
+       
         return labelCountry
     } ()
     
@@ -80,6 +81,4 @@ private extension CustomCellMiddle {
         ])
     }
 }
-
-
 

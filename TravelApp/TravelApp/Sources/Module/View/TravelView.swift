@@ -37,7 +37,7 @@ class TravelView: UIView {
         collectionViewBottom.backgroundColor = UIColor(red: 228/255, green: 196/255, blue: 172/255, alpha: 1)
         return collectionViewBottom
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -47,6 +47,7 @@ class TravelView: UIView {
         setupConstraints()
         
         collectionViewTop.register(CustomCellTop.self, forCellWithReuseIdentifier: "cellTop")
+        collectionViewTop.register(CustomCellFirstTop.self, forCellWithReuseIdentifier: "cellTop2")
         collectionViewMiddle.register(CustomCellMiddle.self, forCellWithReuseIdentifier: "cellMiddle")
         collectionViewBottom.register(CustomCellBottom.self, forCellWithReuseIdentifier: "cellBottom")
     }
@@ -76,6 +77,7 @@ private extension TravelView {
     
     func setupConstraints() {
         NSLayoutConstraint.activate ([
+            
             collectionViewTop.topAnchor.constraint(equalTo: self.topAnchor, constant: 60),
             collectionViewTop.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             collectionViewTop.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
@@ -84,12 +86,12 @@ private extension TravelView {
             collectionViewMiddle.topAnchor.constraint(equalTo: collectionViewTop.bottomAnchor),
             collectionViewMiddle.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             collectionViewMiddle.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
-            collectionViewMiddle.heightAnchor.constraint(equalToConstant: 400),
+            collectionViewMiddle.heightAnchor.constraint(equalToConstant: 390),
 
-            collectionViewBottom.topAnchor.constraint(equalTo: collectionViewMiddle.bottomAnchor),
+            collectionViewBottom.topAnchor.constraint(equalTo: collectionViewMiddle.bottomAnchor,constant: 18),
             collectionViewBottom.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             collectionViewBottom.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
-            collectionViewBottom.heightAnchor.constraint(equalToConstant: 190)
+            collectionViewBottom.heightAnchor.constraint(equalToConstant: 200)
         ])
     }
 }
