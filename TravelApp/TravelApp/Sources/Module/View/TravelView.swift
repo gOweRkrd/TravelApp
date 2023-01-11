@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TravelView: UIView {
+final class TravelView: UIView {
     
     // MARK: - View
     
@@ -16,7 +16,7 @@ class TravelView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let collectionViewTop = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionViewTop.backgroundColor = UIColor(red: 228/255, green: 196/255, blue: 172/255, alpha: 1)
+        collectionViewTop.backgroundColor = UIColor(red: 228 / 255, green: 196 / 255, blue: 172 / 255, alpha: 1)
         return collectionViewTop
     }()
 
@@ -25,7 +25,7 @@ class TravelView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let collectionViewMiddle = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionViewMiddle.backgroundColor = UIColor(red: 228/255, green: 196/255, blue: 172/255, alpha: 1)
+        collectionViewMiddle.backgroundColor = UIColor(red: 228 / 255, green: 196 / 255, blue: 172 / 255, alpha: 1)
         return collectionViewMiddle
     }()
     
@@ -34,14 +34,14 @@ class TravelView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let collectionViewBottom = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionViewBottom.backgroundColor = UIColor(red: 228/255, green: 196/255, blue: 172/255, alpha: 1)
+        collectionViewBottom.backgroundColor = UIColor(red: 228 / 255, green: 196 / 255, blue: 172 / 255, alpha: 1)
         return collectionViewBottom
     }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        print(frame.width,frame.height)
+        print(frame.width, frame.height)
         configure()
         addSubView()
         setupConstraints()
@@ -62,7 +62,7 @@ class TravelView: UIView {
 private extension TravelView {
     
     func configure() {
-        backgroundColor = UIColor(red: 228/255, green: 196/255, blue: 172/255, alpha: 1)
+        backgroundColor = UIColor(red: 228 / 255, green: 196 / 255, blue: 172 / 255, alpha: 1)
     }
     
     func addSubView() {
@@ -76,7 +76,7 @@ private extension TravelView {
     }
     
     func setupConstraints() {
-        NSLayoutConstraint.activate ([
+        NSLayoutConstraint.activate([
             
             collectionViewTop.topAnchor.constraint(equalTo: self.topAnchor, constant: 60),
             collectionViewTop.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
@@ -88,7 +88,7 @@ private extension TravelView {
             collectionViewMiddle.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             collectionViewMiddle.heightAnchor.constraint(equalToConstant: 390),
 
-            collectionViewBottom.topAnchor.constraint(equalTo: collectionViewMiddle.bottomAnchor,constant: 18),
+            collectionViewBottom.topAnchor.constraint(equalTo: collectionViewMiddle.bottomAnchor, constant: 18),
             collectionViewBottom.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             collectionViewBottom.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             collectionViewBottom.heightAnchor.constraint(equalToConstant: 200)

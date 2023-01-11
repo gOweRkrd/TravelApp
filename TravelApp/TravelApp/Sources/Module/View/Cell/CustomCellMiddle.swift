@@ -28,22 +28,22 @@ final class CustomCellMiddle: UICollectionViewCell {
         return imageView
     }()
     
-    lazy var labelCountry : UILabel = {
+    lazy var labelCountry: UILabel = {
         
         let labelCountry = UILabel()
         labelCountry.font = UIFont.boldSystemFont(ofSize: 30.0)
         labelCountry.textAlignment = .center
-        labelCountry.textColor = UIColor(red: 248/255, green: 247/255, blue: 241/255, alpha: 1)
+        labelCountry.textColor = UIColor(red: 248 / 255, green: 247 / 255, blue: 241 / 255, alpha: 1)
        
         return labelCountry
-    } ()
+    }()
     
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
-        addSubView ()
+        addSubView()
         setupConstraints()
     }
     
@@ -68,7 +68,7 @@ private extension CustomCellMiddle {
         
         NSLayoutConstraint.activate([
             
-            labelCountry.topAnchor.constraint(equalTo: contentView.topAnchor,constant: -120),
+            labelCountry.topAnchor.constraint(equalTo: contentView.topAnchor, constant: -120),
             labelCountry.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             labelCountry.rightAnchor.constraint(equalTo: contentView.rightAnchor),
             labelCountry.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
@@ -81,4 +81,3 @@ private extension CustomCellMiddle {
         ])
     }
 }
-

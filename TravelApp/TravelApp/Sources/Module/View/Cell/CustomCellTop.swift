@@ -30,7 +30,7 @@ final class CustomCellTop: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
-        addSubView ()
+        addSubView()
         setupConstraints()
     }
     
@@ -58,4 +58,3 @@ private extension CustomCellTop {
         ])
     }
 }
-

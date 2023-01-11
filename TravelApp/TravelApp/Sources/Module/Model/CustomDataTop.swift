@@ -18,6 +18,5 @@ let dataTopCV: [CustomDataTop] = [
     CustomDataTop(image: #imageLiteral(resourceName: "Таиланд2")),
     CustomDataTop(image: #imageLiteral(resourceName: "Таиланд1")),
     CustomDataTop(image: #imageLiteral(resourceName: "Таиланд3")),
-    CustomDataTop(image: #imageLiteral(resourceName: "Таиланд5")),
+    CustomDataTop(image: #imageLiteral(resourceName: "Таиланд5"))
 ]
-

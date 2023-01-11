@@ -31,7 +31,7 @@ final class CustomCellBottom: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
-        addSubView ()
+        addSubView()
         setupConstraints()
     }
     
@@ -51,7 +51,7 @@ private extension CustomCellBottom {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: contentView.topAnchor,constant: -30),
+            imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: -30),
             imageView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             imageView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
             imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
@@ -59,4 +59,3 @@ private extension CustomCellBottom {
         ])
     }
 }
-

@@ -13,7 +13,6 @@ final class TravelViewController: UIViewController {
     
     let selfView = TravelView()
     
-    
     // MARK: - Lifecycle
     
     override func loadView() {
@@ -36,19 +35,19 @@ final class TravelViewController: UIViewController {
 
 // MARK: - CollectionViewDataSource
 
-extension TravelViewController:  UICollectionViewDataSource {
+extension TravelViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         switch collectionView {
                 
-            case selfView.collectionViewTop :
+        case selfView.collectionViewTop:
                 return dataTopCV.count
                 
-            case selfView.collectionViewMiddle :
+        case selfView.collectionViewMiddle:
                 return dataMiddleCV.count
                 
-            default:
+        default:
                 return dataBottomCV.count
         }
         
@@ -58,25 +57,25 @@ extension TravelViewController:  UICollectionViewDataSource {
         
         switch collectionView {
                 
-            case selfView.collectionViewTop :
+        case selfView.collectionViewTop: 
                 switch indexPath.row {
-                    case 0:
+                case 0:
                         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellTop2", for: indexPath) as! CustomCellFirstTop
                         
                         return cell
                         
-                    default:
+                default:
                         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellTop", for: indexPath) as! CustomCellTop
                         cell.data = dataTopCV[indexPath.item]
                         return cell
                 }
                 
-            case selfView.collectionViewMiddle :
+        case selfView.collectionViewMiddle:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellMiddle", for: indexPath) as! CustomCellMiddle
                 cell.data = dataMiddleCV[indexPath.item]
                 return cell
                 
-            default:
+        default:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellBottom", for: indexPath) as! CustomCellBottom
                 cell.data = dataBottomCV[indexPath.item]
                 return cell
@@ -92,44 +91,20 @@ extension TravelViewController: UICollectionViewDelegateFlowLayout {
         
         switch collectionView {
                 
-            case selfView.collectionViewTop :
+        case selfView.collectionViewTop:
                 switch indexPath.row {
-                    case 0:
-                        return CGSize(width: collectionView.frame.width/5, height: collectionView.frame.width/3)
+                case 0:
+                        return CGSize(width: collectionView.frame.width / 5, height: collectionView.frame.width / 3)
                         
-                    default:
-                        return CGSize(width: collectionView.frame.width/2.5, height: collectionView.frame.width/3)
+                default:
+                        return CGSize(width: collectionView.frame.width / 2.5, height: collectionView.frame.width / 3)
                 }
                 
-            case selfView.collectionViewMiddle :
-                return CGSize(width: collectionView.frame.width/2.1, height: collectionView.frame.width/2)
+        case selfView.collectionViewMiddle:
+                return CGSize(width: collectionView.frame.width / 2.1, height: collectionView.frame.width / 2)
                 
-            default:
-                return CGSize(width: collectionView.frame.width/2.5, height: collectionView.frame.width/3)
-        }
-    }
-}
-
-// MARK: - SwiftUI Canvas
-
-import SwiftUI
-
-struct PeopleVCProvider: PreviewProvider {
-    static var previews: some View {
-        Container().edgesIgnoringSafeArea(.all)
-            .previewDevice("iPhone 14 Pro ")
-    }
-    
-    struct Container: UIViewControllerRepresentable {
-        
-        let tabBarVC = TravelViewController()
-        
-        func makeUIViewController(context: Context) -> some UIViewController {
-            tabBarVC
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-            
+        default:
+                return CGSize(width: collectionView.frame.width / 2.5, height: collectionView.frame.width / 3)
         }
     }
 }

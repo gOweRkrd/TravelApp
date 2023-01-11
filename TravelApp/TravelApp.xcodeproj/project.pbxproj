@@ -108,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				50D43649295C74A5002F9085 /* Module */,
-				50D4364D295C751F002F9085 /* Controller */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -118,6 +117,7 @@
 			children = (
 				50D4364A295C74B5002F9085 /* Model */,
 				50D4364B295C74EC002F9085 /* View */,
+				50D4364D295C751F002F9085 /* Controller */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -170,6 +170,7 @@
 				50372404295C2C2F003F9BDC /* Sources */,
 				50372405295C2C2F003F9BDC /* Frameworks */,
 				50372406295C2C2F003F9BDC /* Resources */,
+				5072C44C296EE1240094FC73 /* SwitLint */,
 			);
 			buildRules = (
 			);
@@ -224,6 +225,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5072C44C296EE1240094FC73 /* SwitLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwitLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		50372404295C2C2F003F9BDC /* Sources */ = {

@@ -50,7 +50,7 @@ final class CustomCellFirstTop: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
-        addSubView ()
+        addSubView()
         setupConstraints()
     }
     
@@ -76,7 +76,6 @@ private extension CustomCellFirstTop {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            
 
             imageView.widthAnchor.constraint(equalToConstant: 55),
             imageView.heightAnchor.constraint(equalToConstant: 55),
@@ -91,4 +90,3 @@ private extension CustomCellFirstTop {
         ])
     }
 }
-
